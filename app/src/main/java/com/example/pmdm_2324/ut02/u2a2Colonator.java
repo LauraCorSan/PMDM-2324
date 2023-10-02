@@ -2,33 +2,64 @@ package com.example.pmdm_2324.ut02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.pmdm_2324.R;
 
 public class u2a2Colonator extends AppCompatActivity {
-    SeekBar sbBarraColor;
-    TextView tvDimeColor;
+    EditText etNoombreColor;
+    SeekBar sbBarraRojo;
+    SeekBar sbBarraVerde;
+    SeekBar sbBarraAzul;
+    Switch swContraste;
     Button btGenerar;
+    TextView tvColorResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_u2a2_colonator);
 
-        sbBarraColor=findViewById(R.id.u2a2sbRojo);
-        tvDimeColor=findViewById(R.id.u2a2tvColorResultado);
+        //nombre color
+        etNoombreColor=findViewById(R.id.u2a2etColor);
+
+        //barras de colores
+        sbBarraRojo=findViewById(R.id.u2a2sbRojo);
+        sbBarraVerde=findViewById(R.id.u2a2sbVerde);
+        sbBarraAzul=findViewById(R.id.u2a2sbAzul);
+
+        //contraste o no
+        swContraste=findViewById(R.id.u2a2swContraste);
+
+        //Boton
         btGenerar=findViewById(R.id.u2a2btGenerar);
+
+        //Caja de texto con nombre y color de fondo
+        tvColorResultado=findViewById(R.id.u2a2tvColorResultado);
+
 
 
         btGenerar.setOnClickListener((View v)-> {
-            int valorBarra=sbBarraColor.getProgress();
+            String nomColor=etNoombreColor.toString();
+            int rojo=sbBarraRojo.getProgress();
+            int verde=sbBarraVerde.getProgress();
+            int azul=sbBarraAzul.getProgress();
 
-            tvDimeColor.setText(String.valueOf(valorBarra));
+            if(swContraste.isChecked()){
+                tvColorResultado.setTextColor(Color.BLACK);
+            }else{
+                tvColorResultado.setTextColor(Color.WHITE);
+            }
+
+            tvColorResultado.setText(nomColor);
+            tvColorResultado.setBackgroundColor(Color.rgb(rojo,verde,azul));
 
         });
     }
