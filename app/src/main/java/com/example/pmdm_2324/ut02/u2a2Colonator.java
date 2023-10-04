@@ -15,9 +15,7 @@ import com.example.pmdm_2324.R;
 
 public class u2a2Colonator extends AppCompatActivity {
     EditText etNoombreColor;
-    SeekBar sbBarraRojo;
-    SeekBar sbBarraVerde;
-    SeekBar sbBarraAzul;
+    SeekBar sbBarraRojo, sbBarraVerde, sbBarraAzul;
     Switch swContraste;
     Button btGenerar;
     TextView tvColorResultado;
@@ -44,19 +42,19 @@ public class u2a2Colonator extends AppCompatActivity {
         //Caja de texto con nombre y color de fondo
         tvColorResultado=findViewById(R.id.u2a2tvColorResultado);
 
-
-
-        btGenerar.setOnClickListener((View v)-> {
-            String nomColor=etNoombreColor.toString();
-            int rojo=sbBarraRojo.getProgress();
-            int verde=sbBarraVerde.getProgress();
-            int azul=sbBarraAzul.getProgress();
-
+        swContraste.setOnClickListener((View v)->{
             if(swContraste.isChecked()){
                 tvColorResultado.setTextColor(Color.BLACK);
             }else{
                 tvColorResultado.setTextColor(Color.WHITE);
             }
+        });
+
+        btGenerar.setOnClickListener((View v)-> {
+            String nomColor=etNoombreColor.getText().toString();
+            int rojo=sbBarraRojo.getProgress();
+            int verde=sbBarraVerde.getProgress();
+            int azul=sbBarraAzul.getProgress();
 
             tvColorResultado.setText(nomColor);
             tvColorResultado.setBackgroundColor(Color.rgb(rojo,verde,azul));
