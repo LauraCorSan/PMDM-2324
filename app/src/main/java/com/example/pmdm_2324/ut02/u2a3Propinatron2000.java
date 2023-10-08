@@ -19,6 +19,7 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
     RadioButton rbExcelente, rbBueno, rbMalo;
     View.OnClickListener teclasNumeros;
     String cadenaNumeros="";
+    final String limpiar="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,7 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
             cadenaNumeros+=unaTecla.getText().toString();
             tvResultado.setText(cadenaNumeros);
         };
+
         btUno.setOnClickListener(teclasNumeros);
         btDos.setOnClickListener(teclasNumeros);
         btTres.setOnClickListener(teclasNumeros);
@@ -78,37 +80,45 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
         });
 
         btClear.setOnClickListener((View v) -> {
-            cadenaNumeros="";
+            cadenaNumeros=limpiar;
             tvResultado.setText(cadenaNumeros);
         });
 
         btTotal.setOnClickListener((View v)->{
             final double serExcelente=0.2;
             final double serBueno=0.1;
-
-            double totalCuenta= Double.parseDouble(tvResultado.getText().toString()) ;
-            if(grbServicio.getCheckedRadioButtonId()==rbExcelente.getId()){
-                totalCuenta+=totalCuenta*serExcelente;
-                cadenaNumeros=String.valueOf(totalCuenta);
+            if(tvResultado.getText().toString().length()>0){
+                double totalCuenta= Double.parseDouble(tvResultado.getText().toString()) ;
+                if(grbServicio.getCheckedRadioButtonId()==rbExcelente.getId()){
+                    totalCuenta+=totalCuenta*serExcelente;
+                    cadenaNumeros=String.format("%.2f€", totalCuenta);
+                    tvResTotal.setText(cadenaNumeros);
+                    cadenaNumeros=limpiar;
+                    tvResultado.setText(cadenaNumeros);
+                }else if(grbServicio.getCheckedRadioButtonId()==rbBueno.getId()){
+                    totalCuenta+=totalCuenta*serBueno;
+                    cadenaNumeros=String.format("%.2f€", totalCuenta);
+                    tvResTotal.setText(cadenaNumeros);
+                    cadenaNumeros=limpiar;
+                    tvResultado.setText(cadenaNumeros);
+                }else if(grbServicio.getCheckedRadioButtonId()==rbMalo.getId()){
+                    cadenaNumeros=String.format("%.2f€", totalCuenta);
+                    tvResTotal.setText(cadenaNumeros);
+                    cadenaNumeros=limpiar;
+                    tvResultado.setText(cadenaNumeros);
+                }else{
+                /*cadenaNumeros=String.format("%.2f€", totalCuenta);
                 tvResTotal.setText(cadenaNumeros);
-                cadenaNumeros="";
+                cadenaNumeros=limpiar;
                 tvResultado.setText(cadenaNumeros);
-            }else if(grbServicio.getCheckedRadioButtonId()==rbBueno.getId()){
-                totalCuenta+=totalCuenta*serBueno;
-                cadenaNumeros=String.valueOf(totalCuenta);
-                tvResTotal.setText(cadenaNumeros);
-                cadenaNumeros="";
-                tvResultado.setText(cadenaNumeros);
-            }else if(grbServicio.getCheckedRadioButtonId()==rbMalo.getId()){
-                cadenaNumeros=String.valueOf(totalCuenta);
-                tvResTotal.setText(cadenaNumeros);
-                cadenaNumeros="";
-                tvResultado.setText(cadenaNumeros);
-            }else{
-                tvResTotal.setText(cadenaNumeros);
-                cadenaNumeros="";
-                tvResultado.setText(cadenaNumeros);
+                //sino
+                tvResTotal.setText("Seleccione servicio");
+                cadenaNumeros=limpiar;
+                tvResultado.setText(cadenaNumeros);*/
+                }
             }
+
+
         });
 
 

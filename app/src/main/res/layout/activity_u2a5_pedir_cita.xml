@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B4C0EA"
+    tools:context=".ut02.u2a5PedirCita">
+
+    <TextView
+        android:id="@+id/u2a5tvFecha"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_above="@id/u2a5btFecha"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="#FAFAFA"
+        android:gravity="center"
+        android:hint="00-00-00"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#8F8989"
+        android:textColorHint="#AAA1A1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602" />
+
+    <Button
+        android:id="@+id/u2a5btFecha"
+        android:layout_width="120dp"
+        android:layout_height="62dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="#545373"
+        android:text="Fecha"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602" />
+
+    <EditText
+        android:id="@+id/u2a5etDni"
+        android:layout_width="282dp"
+        android:layout_height="60dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:ems="10"
+        android:hint="DNI"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#7B000000"
+        android:textColorHint="#AAA1A1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/u2a5tvHora"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_above="@id/u2a5btHora"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="#FEFCFC"
+        android:gravity="center"
+        android:hint="00 : 00"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#8F8989"
+        android:textColorHint="#AAA1A1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767" />
+
+    <Button
+        android:id="@+id/u2a5btHora"
+        android:layout_width="120dp"
+        android:layout_height="62dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="#545373"
+        android:text="Hora"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769" />
+
+    <ImageView
+        android:id="@+id/u2a5ivPediatra"
+        android:layout_width="421dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="4dp"
+        android:background="#FEFEFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/istockphoto" />
+
+    <TextView
+        android:id="@+id/u2a5tvHoarios"
+        android:layout_width="126dp"
+        android:layout_height="73dp"
+        android:fontFamily="serif"
+        android:text="@string/Horarios"
+        android:textAlignment="textEnd"
+        android:textColor="#545373"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/u2a5tvNombreEmpresa"
+        android:layout_width="415dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/NombreEmpresa"
+        android:textAlignment="center"
+        android:textColor="#545373"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u2a5ivPediatra"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <Button
+        android:id="@+id/u2a5btPediCita"
+        android:layout_width="204dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#545373"
+        android:text="Pedir Cita"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <EditText
+        android:id="@+id/u2a5etNombre"
+        android:layout_width="282dp"
+        android:layout_height="60dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#7B000000"
+        android:textColorHint="#AAA1A1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338" />
+
+    <TextView
+        android:id="@+id/u2a5tvErrorHora"
+        android:layout_width="236dp"
+        android:layout_height="37dp"
+        android:textColor="#F44336"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815" />
+
+    <TextView
+        android:id="@+id/u2a5tvErrorDni"
+        android:layout_width="272dp"
+        android:layout_height="28dp"
+        android:textColor="#F44336"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <TextView
+        android:id="@+id/u2a5tvErrorNombre"
+        android:layout_width="272dp"
+        android:layout_height="28dp"
+        android:textColor="#F44336"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <TextView
+        android:id="@+id/u2a5tvErrorFecha"
+        android:layout_width="236dp"
+        android:layout_height="37dp"
+        android:textColor="#F44336"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <ViewFlipper
+        android:id="@+id/u2a5vfConfirmacion"
+        android:layout_width="405dp"
+        android:layout_height="735dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- Aquí puedes agregar otros layouts que deseas mostrar -->
+        <include
+            layout="@layout/activity_u2a5_confirmar_cita"
+            android:layout_width="407dp"
+            android:layout_height="735dp" />
+
+    </ViewFlipper>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
