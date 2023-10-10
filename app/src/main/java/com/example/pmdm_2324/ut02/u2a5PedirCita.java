@@ -14,6 +14,7 @@ import android.widget.TimePicker;
 import android.widget.ViewFlipper;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Locale;
 
 import com.example.pmdm_2324.R;
@@ -28,6 +29,7 @@ public class u2a5PedirCita extends AppCompatActivity {
     public static final String MSG_ERROR_DNI="El DNI introducido no es valido";
     public static final String MSG_ERROR_HORARIO="La hora seleccionada no es valida\n(Horario: 9:00-14:00)";
     public static final String MSG_HORA_VACIA="Debe seleccionar una hora";
+    public static final String MSG_ERROR_DIA="El dia seleccionado no es valido\n(Horario: Lunes-Viernes)";
     public static final String MSG_FECHA_VACIA="Debe seleccionar una fecha";
     String  dni, nombre,fechaCita, horaCita;
 
@@ -74,10 +76,19 @@ public class u2a5PedirCita extends AppCompatActivity {
                             @Override
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
-                                // on below line we are setting date to our text view.
-                                tvFecha.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-                                fechaCita=tvFecha.getText().toString();
-                                tvErrorFecha.setText(VACIO);
+
+                                Calendar selectedDate = new GregorianCalendar(year, monthOfYear, dayOfMonth);
+                                int dayOfWeek = selectedDate.get(Calendar.DAY_OF_WEEK);
+
+                                if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
+                                    // Mostrar un mensaje de error y no actualizar la fecha.
+                                    tvErrorFecha.setText(MSG_ERROR_DIA);
+                                } else {
+                                    // on below line we are setting date to our text view.
+                                    tvFecha.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                    fechaCita = tvFecha.getText().toString();
+                                    tvErrorFecha.setText(VACIO);
+                                }
                             }
                         },
                         // on below line we are passing year, month and day for selected date in our date picker.
