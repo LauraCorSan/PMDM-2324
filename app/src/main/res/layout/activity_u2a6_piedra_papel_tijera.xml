@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00F7FEFD"
+    android:visibility="visible"
+    tools:context=".ut02.u2a6PiedraPapelTijera">
+
+    <TextView
+        android:id="@+id/u2a6tvNombreUs"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#53CDDC39"
+        android:text="Tu"
+        android:textAlignment="center"
+        android:textColor="#2C9431"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u2a6tvMaquina"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="32dp"
+        android:background="#4F673AB7"
+        android:text="Maquina"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/u2a6tvNombreUs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u2a6tvNombreUs" />
+
+    <TextView
+        android:id="@+id/u2a6tvContUsuario"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6tvNombreUs"
+        app:layout_constraintStart_toStartOf="@+id/u2a6tvNombreUs"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6tvNombreUs" />
+
+    <TextView
+        android:id="@+id/u2a6tvContMaquina"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6tvMaquina"
+        app:layout_constraintStart_toStartOf="@+id/u2a6tvMaquina"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6tvMaquina" />
+
+    <ImageView
+        android:id="@+id/u2a6ivPiedra"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217"
+        app:srcCompat="@drawable/piedra" />
+
+    <ImageView
+        android:id="@+id/u2a6ivTijeras"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/u2a6ivPiedra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u2a6ivPiedra"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tijera" />
+
+    <ImageView
+        android:id="@+id/u2a6ivPapel"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6ivTijeras"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/u2a6ivPiedra"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6ivPiedra"
+        app:srcCompat="@drawable/papel" />
+
+    <TextView
+        android:id="@+id/u2a6tvMaquinaElige"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
+        android:text="Maquina elige:"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6ivPapel"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6ivPapel" />
+
+    <ImageView
+        android:id="@+id/u2a6ivRespuesta"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/u2a6tvMaquinaElige"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u2a6tvMaquinaElige"
+        app:srcCompat="@drawable/pregunta" />
+
+    <Button
+        android:id="@+id/u2a6btReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#F88E6D"
+        android:text="Reiniciar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6tvMaquinaElige"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/u2a6tvMensaje"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6tvMaquinaElige"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u2a6tvMaquinaElige"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6tvMaquinaElige" />
+
+    <ViewFlipper
+        android:id="@+id/u2a6vfFinJuego"
+        android:layout_width="410dp"
+        android:layout_height="880dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/activity_u2a6_fin_juego"
+            android:layout_width="410dp"
+            android:layout_height="880dp" />
+
+    </ViewFlipper>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

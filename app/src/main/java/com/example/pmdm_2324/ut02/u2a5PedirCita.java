@@ -140,8 +140,6 @@ public class u2a5PedirCita extends AppCompatActivity {
         });
 
 
-
-
         btPediCita.setOnClickListener ((View v)->{
             nombre=etNombre.getText().toString();
             dni=etDni.getText().toString();
@@ -181,14 +179,7 @@ public class u2a5PedirCita extends AppCompatActivity {
                 }else{
                     tvErrorHora.setText(VACIO);
                 }
-
             }
-
-
-
-
-
-
         });
 
 
