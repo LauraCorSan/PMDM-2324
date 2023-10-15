@@ -40,27 +40,36 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
     public static final String MSG_VICTORIA="¡HAS GANADO!";
     public static final String MSG_DERROTA="¡HAS PERDIDO!";
 
-    public static final int MAX_VICTORIAS=3;
+    public static final int MAX_VICTORIAS=10;
     public int contUsuario=0;
     public  int contMaquina=0;
-    public int contEmpate=0;
+    public int multiplicadorEmpate=1;
+
+    /*Cuando la actividad se recrea después de un cambio de configuración, como una rotación, Android llama al método onRestoreInstanceState(Bundle savedInstanceState).
+     En este método, puedes recuperar los valores que guardaste previamente en onSaveInstanceState(). Si savedInstanceState no es nulo, significa que hay datos
+     guardados y puedes recuperarlos de savedInstanceState.*/
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // Guarda el estado de los contadores en el Bundle
+        outState.putInt("contUsuario", contUsuario);
+        outState.putInt("contMaquina", contMaquina);
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Obtén la orientación actual del dispositivo
+        // La orientación actual del dispositivo
         int orientacion = getResources().getConfiguration().orientation;
 
         if (orientacion == Configuration.ORIENTATION_LANDSCAPE) {
-            // Si el dispositivo está en orientación horizontal, carga el layout horizontal
+            // Si el dispositivo está en horizontal (layout horizontal)
             setContentView(R.layout.activity_u2a6_piedra_papel_tijera_land);
         } else {
-            // Si el dispositivo está en orientación vertical, carga el layout vertical
+            // Si el dispositivo está en vertical (layout vertical)
             setContentView(R.layout.activity_u2a6_piedra_papel_tijera);
         }
-
 
         tvContUsuario=findViewById(R.id.u2a6tvContUsuario);
         tvContMaquina=findViewById(R.id.u2a6tvContMaquina);
@@ -99,10 +108,8 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                     tvFinJuego.setText(MSG_VICTORIA);
                     ivFinJuego.setImageResource(R.drawable.trofeo_png);
                 }
-
                     vfFinJuego.setVisibility(View.VISIBLE);
                     vfFinJuego.showNext();
-
             }
         };
         ivPiedra.setOnClickListener(manejador);
@@ -115,35 +122,36 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                     .setMessage("¿Estas seguro?")
                     .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            // Acciones a realizar cuando el usuario hace clic en "Aceptar"
                             vfFinJuego.setVisibility(View.GONE);
                             ivRespuesta.setImageResource(R.drawable.pregunta);
-
                             contUsuario=0;
                             tvContUsuario.setText(String.valueOf(contUsuario));
                             contMaquina=0;
                             tvContMaquina.setText(String.valueOf(contMaquina));
-                            contEmpate=0;
+                            multiplicadorEmpate=1;
                             tvMensaje.setText(VACIO);
                             dialog.dismiss();
                         }
                     })
                     .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            // Acciones a realizar cuando el usuario hace clic en "Cancelar"
                             dialog.dismiss();
                         }
                     });
-
-            // Crear y mostrar el AlertDialog
+            // Crear y mostrar el alert
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
-
         });
 
-        //cambiar layout
-
-
+        /*se están guardando los valores actuales de contUsuario y contMaquina en el objeto Bundle llamado outState.
+        Un Bundle es un contenedor de pares clave-valor, donde puedes almacenar datos para ser recuperados más tarde*/
+        if (savedInstanceState != null) {
+            contUsuario = savedInstanceState.getInt("contUsuario", 0);
+            contMaquina = savedInstanceState.getInt("contMaquina", 0);
+            // Actualiza la interfaz de usuario con los valores restaurados
+            tvContUsuario.setText(String.valueOf(contUsuario));
+            tvContMaquina.setText(String.valueOf(contMaquina));
+        }
     }
 
 
@@ -154,14 +162,27 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                 ivRespuesta.setImageResource(R.drawable.piedra);
                 if(eleccionUsuario==Eleccion.PAPEL){//gana
                     tvMensaje.setText(MSG_USUARIO_GANA);
-                    contUsuario++;
-                    tvContUsuario.setText(String.valueOf(contUsuario));
+                    if(multiplicadorEmpate<=1){
+                        contUsuario++;
+                        tvContUsuario.setText(String.valueOf(contUsuario));
+                    }else{
+                        contUsuario+=multiplicadorEmpate;
+                        tvContUsuario.setText(String.valueOf(contUsuario));
+                    }
+                    multiplicadorEmpate=1;
                 } else if (eleccionUsuario==Eleccion.TIJERA) {//pierde
                     tvMensaje.setText(MSG_USUARIO_PIERDE);
+                    if(multiplicadorEmpate<=1){
                     contMaquina++;
                     tvContMaquina.setText(String.valueOf(contMaquina));
+                    }else{
+                        contMaquina+=multiplicadorEmpate;
+                        tvContMaquina.setText(String.valueOf(contMaquina));
+                    }
+                    multiplicadorEmpate=1;
                 }else{//empate
                     tvMensaje.setText(MSG_EMPATE);
+                    multiplicadorEmpate*=2;
                 }
             break;
 
@@ -169,14 +190,27 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                 ivRespuesta.setImageResource(R.drawable.papel);
                 if(eleccionUsuario==Eleccion.TIJERA){//gana
                     tvMensaje.setText(MSG_USUARIO_GANA);
-                    contUsuario++;
-                    tvContUsuario.setText(String.valueOf(contUsuario));
+                    if(multiplicadorEmpate<=1){
+                        contUsuario++;
+                        tvContUsuario.setText(String.valueOf(contUsuario));
+                    }else{
+                        contUsuario+=multiplicadorEmpate;
+                        tvContUsuario.setText(String.valueOf(contUsuario));
+                    }
+                    multiplicadorEmpate=1;
                 } else if (eleccionUsuario==Eleccion.PIEDRA) {//pierde
                     tvMensaje.setText(MSG_USUARIO_PIERDE);
-                    contMaquina++;
-                    tvContMaquina.setText(String.valueOf(contMaquina));
+                    if(multiplicadorEmpate<=1){
+                        contMaquina++;
+                        tvContMaquina.setText(String.valueOf(contMaquina));
+                    }else{
+                        contMaquina+=multiplicadorEmpate;
+                        tvContMaquina.setText(String.valueOf(contMaquina));
+                    }
+                    multiplicadorEmpate=1;
                 }else{//empate
                     tvMensaje.setText(MSG_EMPATE);
+                    multiplicadorEmpate*=2;
                 }
             break;
 
@@ -184,14 +218,27 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                 ivRespuesta.setImageResource(R.drawable.tijera);
                 if(eleccionUsuario==Eleccion.PIEDRA){//gana
                     tvMensaje.setText(MSG_USUARIO_GANA);
-                    contUsuario++;
-                    tvContUsuario.setText(String.valueOf(contUsuario));
+                    if(multiplicadorEmpate<=1){
+                        contUsuario++;
+                        tvContUsuario.setText(String.valueOf(contUsuario));
+                    }else{
+                        contUsuario+=multiplicadorEmpate;
+                        tvContUsuario.setText(String.valueOf(contUsuario));
+                    }
+                    multiplicadorEmpate=1;
                 } else if (eleccionUsuario==Eleccion.PAPEL) {//pierde
                     tvMensaje.setText(MSG_USUARIO_PIERDE);
-                    contMaquina++;
-                    tvContMaquina.setText(String.valueOf(contMaquina));
+                    if(multiplicadorEmpate<=1){
+                        contMaquina++;
+                        tvContMaquina.setText(String.valueOf(contMaquina));
+                    }else{
+                        contMaquina+=multiplicadorEmpate;
+                        tvContMaquina.setText(String.valueOf(contMaquina));
+                    }
+                    multiplicadorEmpate=1;
                 }else{//empate
                     tvMensaje.setText(MSG_EMPATE);
+                    multiplicadorEmpate*=2;
                 }
             break;
         }
