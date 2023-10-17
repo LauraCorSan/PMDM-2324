@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +54,7 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
         // Guarda el estado de los contadores en el Bundle
         outState.putInt("contUsuario", contUsuario);
         outState.putInt("contMaquina", contMaquina);
+        outState.putInt("multiplicadorEmpate", multiplicadorEmpate);
     }
 
 
@@ -89,27 +91,30 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
         ivFinJuego=findViewById(R.id.u2a6ivFinJuego);
 
 
+
         manejador = (View pulsado) -> {
-            if(contMaquina<MAX_VICTORIAS && contUsuario<MAX_VICTORIAS){
-                if(pulsado.getId()==R.id.u2a6ivPiedra){
-                    jugar(Eleccion.PIEDRA);
-                }
-                if(pulsado.getId()==R.id.u2a6ivPapel){
-                    jugar( Eleccion.PAPEL);
-                }
-                if(pulsado.getId()==R.id.u2a6ivTijeras){
-                    jugar( Eleccion.TIJERA);
-                }
-            }else {
-                if (contMaquina >= MAX_VICTORIAS) {
-                    tvFinJuego.setText(MSG_DERROTA);
-                    ivFinJuego.setImageResource(R.drawable.sad_face);
-                } else if (contUsuario >= MAX_VICTORIAS) {
-                    tvFinJuego.setText(MSG_VICTORIA);
-                    ivFinJuego.setImageResource(R.drawable.trofeo_png);
-                }
-                    vfFinJuego.setVisibility(View.VISIBLE);
-                    vfFinJuego.showNext();
+            if(pulsado.getId()==R.id.u2a6ivPiedra){
+                ivPiedra.clearColorFilter();
+
+                ivPapel.setColorFilter(Color.argb(100, 0, 0, 0)); // 150 es la opacidad (0-255)
+                ivTijera.setColorFilter(Color.argb(100, 0, 0, 0)); // 150 es la opacidad (0-255)
+
+                jugar(Eleccion.PIEDRA);
+            }
+            if(pulsado.getId()==R.id.u2a6ivPapel){
+                ivPapel.clearColorFilter();
+                ivPiedra.setColorFilter(Color.argb(100, 0, 0, 0)); // 150 es la opacidad (0-255)
+                ivTijera.setColorFilter(Color.argb(100, 0, 0, 0)); // 150 es la opacidad (0-255)
+
+                jugar( Eleccion.PAPEL);
+            }
+            if(pulsado.getId()==R.id.u2a6ivTijeras){
+                ivTijera.clearColorFilter();
+
+                ivPiedra.setColorFilter(Color.argb(100, 0, 0, 0)); // 150 es la opacidad (0-255)
+                ivPapel.setColorFilter(Color.argb(100, 0, 0, 0)); // 150 es la opacidad (0-255)
+
+                jugar( Eleccion.TIJERA);
             }
         };
         ivPiedra.setOnClickListener(manejador);
@@ -122,14 +127,22 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                     .setMessage("¿Estas seguro?")
                     .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
+                            ivPiedra.clearColorFilter();
+                            ivPapel.clearColorFilter();
+                            ivTijera.clearColorFilter();
+
                             vfFinJuego.setVisibility(View.GONE);
                             ivRespuesta.setImageResource(R.drawable.pregunta);
+
                             contUsuario=0;
                             tvContUsuario.setText(String.valueOf(contUsuario));
+
                             contMaquina=0;
                             tvContMaquina.setText(String.valueOf(contMaquina));
+
                             multiplicadorEmpate=1;
                             tvMensaje.setText(VACIO);
+
                             dialog.dismiss();
                         }
                     })
@@ -148,6 +161,7 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
         if (savedInstanceState != null) {
             contUsuario = savedInstanceState.getInt("contUsuario", 0);
             contMaquina = savedInstanceState.getInt("contMaquina", 0);
+            multiplicadorEmpate = savedInstanceState.getInt("multiplicadorEmpate", 1);
             // Actualiza la interfaz de usuario con los valores restaurados
             tvContUsuario.setText(String.valueOf(contUsuario));
             tvContMaquina.setText(String.valueOf(contMaquina));
@@ -242,6 +256,21 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
                 }
             break;
         }
+        if(contMaquina>=MAX_VICTORIAS || contUsuario>=MAX_VICTORIAS){
+            finDeJuego();
+        }
+    }
+
+    public void finDeJuego(){
+        if (contMaquina >= MAX_VICTORIAS) {
+            tvFinJuego.setText(MSG_DERROTA);
+            ivFinJuego.setImageResource(R.drawable.sad_face);
+        } else if (contUsuario >= MAX_VICTORIAS) {
+            tvFinJuego.setText(MSG_VICTORIA);
+            ivFinJuego.setImageResource(R.drawable.trofeo_png);
+        }
+        vfFinJuego.setVisibility(View.VISIBLE);
+        vfFinJuego.showNext();
     }
 
 }

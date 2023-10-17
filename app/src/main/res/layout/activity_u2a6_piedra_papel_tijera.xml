@@ -83,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/u2a6ivPiedra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/u2a6ivPiedra"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0"
         app:srcCompat="@drawable/tijera" />
 
     <ImageView
