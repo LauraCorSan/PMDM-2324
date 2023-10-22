@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1E4BA"
+    tools:context=".ut03.u3a2aCrearHelado">
+
+    <TextView
+        android:id="@+id/u3a2tvVainilla"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="160dp"
+        android:background="#96F8E64B"
+        android:gravity="center"
+        android:text="Vainilla"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a2tvChocolate"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#B6755628"
+        android:gravity="center"
+        android:text="Chocolate"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvFresa"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvFresa" />
+
+    <TextView
+        android:id="@+id/u3a2tvFresa"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#C5F397B6"
+        android:gravity="center"
+        android:text="Fresa"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvVainilla"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvVainilla"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvVainilla" />
+
+    <EditText
+        android:id="@+id/u3a2etNumVainilla"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="80dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a2tvVainilla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a2tvVainilla" />
+
+    <EditText
+        android:id="@+id/u3a2etNumFresa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a2tvFresa"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2etNumVainilla"
+        app:layout_constraintStart_toStartOf="@+id/u3a2etNumVainilla"
+        app:layout_constraintTop_toTopOf="@+id/u3a2tvFresa"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/u3a2etNumChocolate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a2tvChocolate"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2etNumFresa"
+        app:layout_constraintStart_toStartOf="@+id/u3a2etNumFresa"
+        app:layout_constraintTop_toTopOf="@+id/u3a2tvChocolate" />
+
+    <TextView
+        android:id="@+id/u3a2tvTipo"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:background="#7B009688"
+        android:text="Tipo"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvChocolate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvChocolate"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvChocolate" />
+
+    <Spinner
+        android:id="@+id/u3a2spTipoHelado"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/TiposHelado"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a2tvTipo"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2etNumChocolate"
+        app:layout_constraintTop_toTopOf="@+id/u3a2tvTipo" />
+
+    <Button
+        android:id="@+id/u3a2btCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#009688"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Crear helado"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2spTipoHelado"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvTipo"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2spTipoHelado" />
+
+    <ImageView
+        android:id="@+id/u3a2ivHeladitos"
+        android:layout_width="400dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/helado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

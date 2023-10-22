@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7ED1E4BA"
+    tools:context=".ut03.u3a2bServirHelado">
+
+    <TextView
+        android:id="@+id/u3a2tvCantChocolate"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="#A65E47"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvCantFresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvCantFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvCantFresa" />
+
+    <TextView
+        android:id="@+id/u3a2tvCantFresa"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="#F46194"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvCantVainilla"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvCantVainilla"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvCantVainilla" />
+
+    <TextView
+        android:id="@+id/u3a2tvCantVainilla"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:textColor="#E3D55C"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a2tvTipoHelado"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:textSize="160sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvCantChocolate"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvCantChocolate"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvCantChocolate" />
+
+    <Button
+        android:id="@+id/u3a2btListo"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#009688"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="¡LISTO!"
+        android:textSize="34sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/u3a2tvTipoHelado"
+        app:layout_constraintStart_toStartOf="@+id/u3a2tvTipoHelado"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvTipoHelado" />
+</androidx.constraintlayout.widget.ConstraintLayout>

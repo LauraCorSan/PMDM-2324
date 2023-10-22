@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACB9D9"
+    tools:context=".ut03.u3a1aCalcular">
+
+    <Button
+        android:id="@+id/u3a1btCalcular"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#4C5CB8"
+        android:text="Calcular"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a1etNumero2" />
+
+    <EditText
+        android:id="@+id/u3a1etNumero1"
+        android:layout_width="285dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="120dp"
+        android:background="@android:drawable/button_onoff_indicator_off"
+        android:ems="10"
+        android:hint="Primer numero"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/u3a1etNumero2"
+        android:layout_width="285dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:drawable/button_onoff_indicator_off"
+        android:ems="10"
+        android:hint="Segundo numero"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a1rgOperaciones" />
+
+    <RadioGroup
+        android:id="@+id/u3a1rgOperaciones"
+        android:layout_width="367dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="100dp"
+        android:background="#663F51B5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a1etNumero1">
+
+        <RadioButton
+            android:id="@+id/u3a1rbSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="#181616"
+            android:text="+"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/u3a1rbRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="#181616"
+            android:text="-"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/u3a1rbMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#181616"
+            android:text="x"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/u3a1rbDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#181616"
+            android:text="/"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
