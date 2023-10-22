@@ -15,6 +15,10 @@ public class u3a2bServirHelado extends AppCompatActivity {
     TextView tvVainilla, tvFresa, tvChocolate, tvTipoHelado;
     Button btListo;
 
+    public static final String CUCURUCHO = "V";
+    public static final String P_CUCURUCHO = "Cucurucho";
+    public static final String P_CHOCORUCHO = "ChocoRucho";
+    public static final String TARRINA = "U";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +53,15 @@ public class u3a2bServirHelado extends AppCompatActivity {
         }
         tvChocolate.setText(pintarBolitas(numChocolate));
 
-        String tipoHelado=info.getString(u3a2aCrearHelado.INFO_TIPO).toLowerCase();
-        if (tipoHelado.equals("cucurucho")) {
-            tvTipoHelado.setText("V");
+        String tipoHelado=info.getString(u3a2aCrearHelado.INFO_TIPO);
+        if (tipoHelado.equals(P_CUCURUCHO)) {
+            tvTipoHelado.setText(CUCURUCHO);
             tvTipoHelado.setTextColor(Color.parseColor("#FFA500")); // Naranja
-        } else if (tipoHelado.equals("chocorucho")) {
-            tvTipoHelado.setText("V");
+        } else if (tipoHelado.equals(P_CHOCORUCHO)) {
+            tvTipoHelado.setText(CUCURUCHO);
             tvTipoHelado.setTextColor(Color.parseColor("#8B4513")); // Marrón
         } else {
-            tvTipoHelado.setText("U");
+            tvTipoHelado.setText(TARRINA);
             tvTipoHelado.setTextColor(Color.GRAY); // Gris
         }
 
