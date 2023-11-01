@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3ej2bResultado">
+
+    <EditText
+        android:id="@+id/u3ej2etNumero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Numero"
+        android:inputType="number|numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3ej2btAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Aceptar"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/u3ej2etNumero"
+        app:layout_constraintTop_toBottomOf="@+id/u3ej2etNumero" />
+
+    <Button
+        android:id="@+id/u3ej2btCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#D34D43"
+        android:text="Cancelar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/u3ej2btAceptar"
+        app:layout_constraintEnd_toEndOf="@+id/u3ej2etNumero"
+        app:layout_constraintTop_toTopOf="@+id/u3ej2btAceptar"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
