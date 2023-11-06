@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6F636F"
+    tools:context=".ut03.u3a7cElegirArma">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FAF8FA"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="ELIGE TU ARMA:"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/u3a7ivAmetralladora"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/ametralladora" />
+
+    <ImageView
+        android:id="@+id/u3a7ivLanzacohetes"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivAmetralladora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivAmetralladora"
+        app:srcCompat="@drawable/lanzacohetes" />
+
+    <ImageView
+        android:id="@+id/u3a7ivPistolaLaser"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivAmetralladora"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivAmetralladora"
+        app:srcCompat="@drawable/pistola_laser" />
+
+    <ImageView
+        android:id="@+id/u3a7ivLanzallamas"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivPistolaLaser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivPistolaLaser"
+        app:srcCompat="@drawable/lanzallamas" />
+
+    <Button
+        android:id="@+id/u3a7btCancela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#423656"
+        android:text="Cancelar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btSelecciona"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btSelecciona"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btSelecciona" />
+
+    <Button
+        android:id="@+id/u3a7btLimpia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#423656"
+        android:text="Limpiar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btCancela"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btCancela"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btCancela" />
+
+    <Button
+        android:id="@+id/u3a7btSelecciona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#423656"
+        android:text="Seleccionar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivLanzallamas"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivPistolaLaser"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivLanzallamas" />
+</androidx.constraintlayout.widget.ConstraintLayout>

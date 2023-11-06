@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B65435"
+    tools:context=".ut03.u3a7aMetalSlugSelector">
+
+    <ImageView
+        android:id="@+id/u3a7ivElegirPersonajeJug2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="?attr/popupMenuBackground"
+        app:layout_constraintStart_toStartOf="@+id/u3a7tvJugador2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7tvJugador2"
+        app:srcCompat="@drawable/personaje_desc" />
+
+    <ImageView
+        android:id="@+id/u3a7ivElegirArmaJug2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="30dp"
+        android:background="?attr/popupMenuBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivElegirPersonajeJug2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivElegirPersonajeJug2"
+        app:srcCompat="@drawable/arma_desc" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="405dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/metal_slug_logo" />
+
+    <TextView
+        android:id="@+id/u3a7tvJugador1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="#EE9905"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="  Jugador 1: "
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/u3a7tvJugador2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="#EE9905"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="  Jugador 2: "
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivElegirPersonajeJug1" />
+
+    <ImageView
+        android:id="@+id/u3a7ivElegirPersonajeJug1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="?attr/popupMenuBackground"
+        app:layout_constraintStart_toStartOf="@+id/u3a7tvJugador1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7tvJugador1"
+        app:srcCompat="@drawable/personaje_desc" />
+
+    <ImageView
+        android:id="@+id/u3a7ivElegirArmaJug1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="30dp"
+        android:background="?attr/popupMenuBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivElegirPersonajeJug1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivElegirPersonajeJug1"
+        app:srcCompat="@drawable/arma_desc" />
+
+    <Button
+        android:id="@+id/u3a7btJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#EE9905"
+        android:text="¡Jugar!"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivElegirArmaJug2"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivElegirPersonajeJug2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivElegirArmaJug2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

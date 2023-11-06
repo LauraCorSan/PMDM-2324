@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CD9D56"
+    tools:context=".ut03.u3a7bElegirPersonaje">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FBFBFB"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="ELIGE TU PERSONAJE:"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/u3a7ivMarcoRossi"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/marco_rossi" />
+
+    <ImageView
+        android:id="@+id/u3a7ivEriKasamoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivMarcoRossi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivMarcoRossi"
+        app:srcCompat="@drawable/eri_kasamoto" />
+
+    <ImageView
+        android:id="@+id/u3a7ivTarmaRoving"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivMarcoRossi"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivMarcoRossi"
+        app:srcCompat="@drawable/tarma_roving" />
+
+    <ImageView
+        android:id="@+id/u3a7ivNadiaCassel"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivTarmaRoving"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivTarmaRoving"
+        app:srcCompat="@drawable/nadia_cassel" />
+
+    <Button
+        android:id="@+id/u3a7btCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#AC6F14"
+        android:text="Cancelar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btSeleccionar"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btSeleccionar"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btSeleccionar" />
+
+    <Button
+        android:id="@+id/u3a7btLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#AC6F14"
+        android:text="Limpiar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btCancelar"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btCancelar" />
+
+    <Button
+        android:id="@+id/u3a7btSeleccionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#AC6F14"
+        android:text="Seleccionar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivNadiaCassel"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivTarmaRoving"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivNadiaCassel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@ public class u3a2aCrearHelado extends AppCompatActivity {
     public static final String INFO_TIPO = "tipoHelado";
     EditText etVainilla, etFresa, etChocolate;
     Spinner spTiposHelado;
-    Button btCrar;
+    Button btCrear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +34,10 @@ public class u3a2aCrearHelado extends AppCompatActivity {
 
         spTiposHelado=findViewById(R.id.u3a2spTipoHelado);
 
-        btCrar=findViewById(R.id.u3a2btCrear);
+        btCrear =findViewById(R.id.u3a2btCrear);
 
 
-        btCrar.setOnClickListener((View v)->{
+        btCrear.setOnClickListener((View v)->{
             
             if(!spTiposHelado.getSelectedItem().toString().equals(VACIO)){
                 Intent i = new Intent(this, u3a2bServirHelado.class);
@@ -47,7 +47,7 @@ public class u3a2aCrearHelado extends AppCompatActivity {
                 i.putExtra(INFO_TIPO, spTiposHelado.getSelectedItem().toString());
                 startActivity(i);
 
-                //Quitamos todo para la vuelta
+                //Quitamos t odo para la vuelta
                 etVainilla.setText(VACIO);
                 etFresa.setText(VACIO);
                 etChocolate.setText(VACIO);

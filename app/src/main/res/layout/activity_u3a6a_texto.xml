@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a6aTexto">
+
+    <EditText
+        android:id="@+id/u3a6etTextoUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Escribe tu texto aqui"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a6tvTitulo" />
+
+    <TextView
+        android:id="@+id/u3a6tvInfromacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a6etTextoUsuario"
+        app:layout_constraintStart_toStartOf="@+id/u3a6etTextoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/u3a6etTextoUsuario" />
+
+    <TextView
+        android:id="@+id/u3a6tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="60sp"
+        android:background="#93DA95"
+        android:gravity="center"
+        android:text="Analizador de textos 1.0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a6btAnalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#5FBF63"
+        android:text="Analizar"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a6tvInfromacion"
+        app:layout_constraintStart_toStartOf="@+id/u3a6tvInfromacion"
+        app:layout_constraintTop_toBottomOf="@+id/u3a6tvInfromacion" />
+</androidx.constraintlayout.widget.ConstraintLayout>

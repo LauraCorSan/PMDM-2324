@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ABD975"
+    tools:context=".ut03.u3a9Intents">
+
+    <Button
+        android:id="@+id/u3a9btCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#E9DC70"
+        android:text="Cancion favorita"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a9btMarcarNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#E9DC70"
+        android:text="Marcar 666"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btCancion"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btCancion"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btCancion" />
+
+    <Button
+        android:id="@+id/u3a9btEnviarSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#E9DC70"
+        android:text="Enviar SMS - paco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btMarcarNum"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btMarcarNum"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btMarcarNum" />
+
+    <Button
+        android:id="@+id/u3a9btSorpresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#E9DC70"
+        android:text="Sorpresa"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btEnviarSMS"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btEnviarSMS"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btEnviarSMS" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
