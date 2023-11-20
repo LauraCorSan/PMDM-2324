@@ -25,7 +25,7 @@ public class u3a1aCalcular extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a1a_calcular);
+        setContentView(R.layout.u3a1a_calcular);
 
         etNumero1=findViewById(R.id.u3a1etNumero1);
         etNumero2=findViewById(R.id.u3a1etNumero2);

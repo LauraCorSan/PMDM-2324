@@ -24,7 +24,7 @@ public class u3a6aTexto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a6a_texto);
+        setContentView(R.layout.u3a6a_texto);
 
         etTexto=findViewById(R.id.u3a6etTextoUsuario);
         tvInfromacion=findViewById(R.id.u3a6tvInfromacion);

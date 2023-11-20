@@ -6,11 +6,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.pmdm_2324.R;
@@ -28,7 +26,7 @@ public class u3a7bElegirPersonaje extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a7b_elegir_personaje);
+        setContentView(R.layout.u3a7b_elegir_personaje);
         ivMarco=findViewById(R.id.u3a7ivMarcoRossi);
         ivEri=findViewById(R.id.u3a7ivEriKasamoto);
         ivTarma=findViewById(R.id.u3a7ivTarmaRoving);

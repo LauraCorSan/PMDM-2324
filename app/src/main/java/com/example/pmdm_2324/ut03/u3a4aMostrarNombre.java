@@ -25,7 +25,7 @@ public class u3a4aMostrarNombre extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a4a_mostrar_nombre);
+        setContentView(R.layout.u3a4a_mostrar_nombre);
 
         ivUsuario=findViewById(R.id.u3a4ivUsuario);
 

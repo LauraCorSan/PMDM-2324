@@ -247,7 +247,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <include
-            layout="@layout/activity_u2a5_confirmar_cita"
+            layout="@layout/u2a5_confirmar_cita"
             android:layout_width="407dp"
             android:layout_height="735dp" />
 

@@ -1,7 +1,5 @@
 package com.example.pmdm_2324.ut03;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +26,7 @@ public class u3a7aMetalSlugSelector extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a7a_metal_slug_selector);
+        setContentView(R.layout.u3a7a_metal_slug_selector);
 
         ivElegirPersonaje1=findViewById(R.id.u3a7ivElegirPersonajeJug1);
         ivElegirArma1=findViewById(R.id.u3a7ivElegirArmaJug1);
@@ -98,7 +95,7 @@ public class u3a7aMetalSlugSelector extends AppCompatActivity {
                         }
 
                     }else if (result.getResultCode() == Activity.RESULT_CANCELED){
-
+                        //nada porque ha cancelado la operación
                     }else{
                         //tvMensajes.setText("No obtenemos codigo");
                     }
@@ -142,7 +139,7 @@ public class u3a7aMetalSlugSelector extends AppCompatActivity {
         ivElegirArma2.setOnClickListener(seleccion);
 
         btJugar.setOnClickListener((View)->{
-            if(contPersonajes==MAX_JUGADORES && contArmas==MAX_JUGADORES){
+            if(contPersonajes>=MAX_JUGADORES && contArmas>=MAX_JUGADORES){
                 finish();
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(u3a7aMetalSlugSelector.this);

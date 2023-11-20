@@ -26,7 +26,7 @@ public class u3a2aCrearHelado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a2a_crear_helado);
+        setContentView(R.layout.u3a2a_crear_helado);
 
         etVainilla=findViewById(R.id.u3a2etNumVainilla);
         etFresa=findViewById(R.id.u3a2etNumFresa);

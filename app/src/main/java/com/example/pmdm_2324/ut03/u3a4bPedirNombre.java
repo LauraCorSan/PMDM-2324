@@ -19,7 +19,7 @@ public class u3a4bPedirNombre extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a4b_pedir_nombre);
+        setContentView(R.layout.u3a4b_pedir_nombre);
 
         etNombre=findViewById(R.id.u3a4etNombre);
 

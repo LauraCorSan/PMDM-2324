@@ -24,7 +24,7 @@ public class u3a7cElegirArma extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a7c_elegir_arma);
+        setContentView(R.layout.u3a7c_elegir_arma);
 
         ivAmetralladora=findViewById(R.id.u3a7ivAmetralladora);
         ivLanzacohetes=findViewById(R.id.u3a7ivLanzacohetes);
@@ -65,6 +65,7 @@ public class u3a7cElegirArma extends AppCompatActivity {
                 ivPistolaLaser.setBackgroundResource(android.R.drawable.gallery_thumb);
                 elElegidoId= R.drawable.lanzallamas;            }
         };
+
         ivAmetralladora.setOnClickListener(seleccionado);
         ivLanzacohetes.setOnClickListener(seleccionado);
         ivPistolaLaser.setOnClickListener(seleccionado);

@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,7 +23,7 @@ public class u3a5aFibonacci extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a5a_fibonacci);
+        setContentView(R.layout.u3a5a_fibonacci);
 
         tvNumero1=findViewById(R.id.u3a5tvNum1);
         tvNumero2=findViewById(R.id.u3a5tvNum2);

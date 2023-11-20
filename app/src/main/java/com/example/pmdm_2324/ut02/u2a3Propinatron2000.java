@@ -1,7 +1,6 @@
 package com.example.pmdm_2324.ut02;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.Group;
 
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +23,7 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u2a3_propinatron2000);
+        setContentView(R.layout.u2a3_propinatron2000);
         //numeros
         btUno=findViewById(R.id.u2a3btUno);
         btDos=findViewById(R.id.u2a3btDos);

@@ -67,10 +67,10 @@ public class u2a6PiedraPapelTijera extends AppCompatActivity {
 
         if (orientacion == Configuration.ORIENTATION_LANDSCAPE) {
             // Si el dispositivo está en horizontal (layout horizontal)
-            setContentView(R.layout.activity_u2a6_piedra_papel_tijera_land);
+            setContentView(R.layout.u2a6_piedra_papel_tijera_land);
         } else {
             // Si el dispositivo está en vertical (layout vertical)
-            setContentView(R.layout.activity_u2a6_piedra_papel_tijera);
+            setContentView(R.layout.u2a6_piedra_papel_tijera);
         }
 
         tvContUsuario=findViewById(R.id.u2a6tvContUsuario);

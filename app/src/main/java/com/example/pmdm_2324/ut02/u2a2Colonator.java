@@ -23,7 +23,7 @@ public class u2a2Colonator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u2a2_colonator);
+        setContentView(R.layout.u2a2_colonator);
 
         //nombre color
         etNoombreColor=findViewById(R.id.u2a2etColor);

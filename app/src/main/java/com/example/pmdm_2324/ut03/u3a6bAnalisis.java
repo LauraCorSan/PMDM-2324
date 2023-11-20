@@ -27,7 +27,7 @@ public class u3a6bAnalisis extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a6b_analisis);
+        setContentView(R.layout.u3a6b_analisis);
 
         lvListaLetras = findViewById(R.id.u3a6lvListaLetras);
         btFinAnalisis = findViewById(R.id.u3a6btFinAnalisis);

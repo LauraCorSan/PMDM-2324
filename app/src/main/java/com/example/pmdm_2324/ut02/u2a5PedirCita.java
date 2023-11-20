@@ -37,7 +37,7 @@ public class u2a5PedirCita extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u2a5_pedir_cita);
+        setContentView(R.layout.u2a5_pedir_cita);
 
         etNombre=findViewById(R.id.u2a5etNombre);
         tvErrorNombre=findViewById(R.id.u2a5tvErrorNombre);

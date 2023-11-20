@@ -4,28 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ABD975"
+    android:background="#7EA155"
     tools:context=".ut03.u3a9Intents">
 
     <Button
         android:id="@+id/u3a9btCancion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="#E9DC70"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E5D553"
         android:text="Cancion favorita"
+        android:textColor="#060606"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/u3a9tvError" />
 
     <Button
         android:id="@+id/u3a9btMarcarNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#E9DC70"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E5D553"
         android:text="Marcar 666"
+        android:textColor="#060606"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/u3a9btCancion"
         app:layout_constraintStart_toStartOf="@+id/u3a9btCancion"
@@ -35,9 +38,10 @@
         android:id="@+id/u3a9btEnviarSMS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#E9DC70"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E5D553"
         android:text="Enviar SMS - paco"
+        android:textColor="#060606"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/u3a9btMarcarNum"
         app:layout_constraintStart_toStartOf="@+id/u3a9btMarcarNum"
@@ -47,12 +51,26 @@
         android:id="@+id/u3a9btSorpresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#E9DC70"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E5D553"
         android:text="Sorpresa"
+        android:textColor="#060606"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/u3a9btEnviarSMS"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="@+id/u3a9btEnviarSMS"
         app:layout_constraintTop_toBottomOf="@+id/u3a9btEnviarSMS" />
+
+    <TextView
+        android:id="@+id/u3a9tvError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="#B34239"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

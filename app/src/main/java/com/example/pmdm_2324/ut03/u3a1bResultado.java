@@ -20,7 +20,7 @@ public class u3a1bResultado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a1b_resultado);
+        setContentView(R.layout.u3a1b_resultado);
 
         tvResultado=findViewById(R.id.u3a1tvResultado);
         ivResultado=findViewById(R.id.u3a1ivResultado);

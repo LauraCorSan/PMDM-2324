@@ -18,7 +18,7 @@ public class u3a5bSiguienteNumero extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a5b_siguiente_numero);
+        setContentView(R.layout.u3a5b_siguiente_numero);
 
         tvResultado=findViewById(R.id.u3a5tvResultado);
         btAceptar=findViewById(R.id.u3a5btAceptar);

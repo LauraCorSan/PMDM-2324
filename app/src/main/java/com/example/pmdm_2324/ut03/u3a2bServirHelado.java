@@ -23,7 +23,7 @@ public class u3a2bServirHelado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a2b_servir_helado);
+        setContentView(R.layout.u3a2b_servir_helado);
 
         btListo=findViewById(R.id.u3a2btListo);
 
