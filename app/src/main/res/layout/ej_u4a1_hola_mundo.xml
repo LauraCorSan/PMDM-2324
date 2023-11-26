@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut04.u4a1HolaMundo">
+    tools:context=".ut04.ej_u4a1HolaMundo">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/u4a1fcVista1"
-        android:name="com.example.pmdm_2324.ut04.u4f1HolaMundo"
+        android:name="com.example.pmdm_2324.ut04.ej_u4f1HolaMundo"
         android:layout_width="195dp"
         android:layout_height="350dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +16,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/u4a1fcVista2"
-        android:name="com.example.pmdm_2324.ut04.u4f1HolaMundo"
+        android:name="com.example.pmdm_2324.ut04.ej_u4f1HolaMundo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/u4a1fcVista1"
@@ -26,7 +26,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/u4a1fcVista3"
-        android:name="com.example.pmdm_2324.ut04.u4f1HolaMundo"
+        android:name="com.example.pmdm_2324.ut04.ej_u4f1HolaMundo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +36,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/u4a1fcVista4"
-        android:name="com.example.pmdm_2324.ut04.u4f1HolaMundo"
+        android:name="com.example.pmdm_2324.ut04.ej_u4f1HolaMundo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/u4a1fcVista3"

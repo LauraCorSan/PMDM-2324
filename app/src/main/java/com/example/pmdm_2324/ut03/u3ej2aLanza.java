@@ -10,7 +10,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -24,7 +23,7 @@ public class u3ej2aLanza extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3ej2a_lanza);
+        setContentView(R.layout.ej_u3a2a_lanza);
 
         btObtenerNumero=findViewById(R.id.u3ej2btObtenerNumero);
         tvNumero=findViewById(R.id.u3ej2tvNumero);

@@ -110,6 +110,17 @@
         android:text="crear"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/u3a8sbAzul"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/u3a8sbAzul"
         app:layout_constraintTop_toBottomOf="@+id/u3a8sbAzul" />
+
+    <TextView
+        android:id="@+id/u3a8tvMuestraColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="¡Pulsa para ver el color!"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a8tvColores"
+        app:layout_constraintStart_toEndOf="@+id/u3a8tvColores"
+        app:layout_constraintTop_toTopOf="@+id/u3a8tvColores" />
 </androidx.constraintlayout.widget.ConstraintLayout>

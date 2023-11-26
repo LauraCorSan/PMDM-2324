@@ -45,6 +45,10 @@ public class Monstruo implements Serializable {
         return limbsDistribution;
     }
 
+    public int getColor() {
+        return color;
+    }
+
     @Override
     public String toString() {
         String resultado="";

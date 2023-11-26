@@ -10,13 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.example.pmdm_2324.R;
 
 public class u3a8aCrearMonstruo extends AppCompatActivity {
     public static final int MAX_NUM_PATAS = 10;
     public static final String INFO_MONSTRUO = "miMonstruo";
-
+    TextView tvMuestraColor;
     EditText etNombre, etNumPatas;
     SeekBar sbBarraRojo, sbBarraVerde, sbBarraAzul;
     Button btCrear;
@@ -33,7 +34,18 @@ public class u3a8aCrearMonstruo extends AppCompatActivity {
         sbBarraVerde=findViewById(R.id.u3a8sbVerde);
         sbBarraAzul=findViewById(R.id.u3a8sbAzul);
 
+        tvMuestraColor=findViewById(R.id.u3a8tvMuestraColor);
+
         btCrear=findViewById(R.id.u3a8btCrear);
+
+        tvMuestraColor.setOnClickListener(view -> {
+            int rojo=sbBarraRojo.getProgress();
+            int verde=sbBarraVerde.getProgress();
+            int azul=sbBarraAzul.getProgress();
+
+            int color = Color.rgb(sbBarraRojo.getProgress(), sbBarraVerde.getProgress(), sbBarraAzul.getProgress());
+            tvMuestraColor.setBackgroundColor(color);
+        });
 
 
         btCrear.setOnClickListener((View v)->{

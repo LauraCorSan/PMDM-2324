@@ -26,7 +26,7 @@ public class u3a8bMostrarMonstruo extends AppCompatActivity {
         Monstruo nuevoMonstruo = (Monstruo) receivedMonster;
 
         //tvMostrarMonstruo.setTextColor(serializedMonster.getColor());
-
+        tvMostrarMonstruo.setTextColor(nuevoMonstruo.getColor());
         tvMostrarMonstruo.setText(nuevoMonstruo.toString());
 
     }

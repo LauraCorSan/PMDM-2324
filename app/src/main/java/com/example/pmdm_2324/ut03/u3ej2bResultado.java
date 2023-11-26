@@ -20,7 +20,7 @@ public class u3ej2bResultado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3ej2b_resultado);
+        setContentView(R.layout.ej_u3a2b_resultado);
         btAceptar=findViewById(R.id.u3ej2btAceptar);
         btCancelar=findViewById(R.id.u3ej2btCancelar);
         etNumero=findViewById(R.id.u3ej2etNumero);

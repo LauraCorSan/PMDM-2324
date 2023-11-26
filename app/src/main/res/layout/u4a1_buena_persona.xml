@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0F2A9"
+    tools:context=".ut04.u4a1BuenaPersona">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a1fcNoFumar"
+        android:name="com.example.pmdm_2324.ut04.u4f1BuenaPersona"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:background="#95DF98"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1tvNoFumar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#6EB171"
+        android:gravity="center"
+        android:text="APP BUENA PERSONA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u4a1tvNoFumar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Días sin fumar"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/u4a1tvNoInsultar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Días sin insultar"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1fcNoFumar" />
+
+    <TextView
+        android:id="@+id/u4a1tvNoPelear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Días sin pelear"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1fcNoInsultar" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a1fcNoInsultar"
+        android:name="com.example.pmdm_2324.ut04.u4f1BuenaPersona"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:background="#95DF98"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1tvNoInsultar" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a1fcNoPelear"
+        android:name="com.example.pmdm_2324.ut04.u4f1BuenaPersona"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:background="#95DF98"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1tvNoPelear" />
+</androidx.constraintlayout.widget.ConstraintLayout>
