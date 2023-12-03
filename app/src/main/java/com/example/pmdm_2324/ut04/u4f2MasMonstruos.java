@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.pmdm_2324.R;
+import com.example.pmdm_2324.ut03.Monstruo;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +59,24 @@ public class u4f2MasMonstruos extends Fragment {
         }
     }
 
+    TextView tvMostrarMonstruo;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.u4f2_mas_monstruos, container, false);
+        View layout = inflater.inflate(R.layout.u4f2_mas_monstruos, container, false);
+
+        tvMostrarMonstruo=layout.findViewById(R.id.u4f2tvMostrarMonstruo);
+        return layout;
+    }
+
+    public void pintarMonstruo(Monstruo miCreacion){
+        tvMostrarMonstruo.setTextColor(miCreacion.getColor());
+        tvMostrarMonstruo.setText(miCreacion.toString());
+    }
+
+    public void limpiar(){
+        tvMostrarMonstruo.setText("");
     }
 }

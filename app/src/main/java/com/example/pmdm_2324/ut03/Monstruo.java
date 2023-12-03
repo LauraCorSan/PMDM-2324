@@ -15,34 +15,36 @@ public class Monstruo implements Serializable {
         this.numPatas = numPatas;
         this.color = color;
 
-        ArrayList<Integer> limbsDistribution = distributeLimbs();
+        //Lo pondriamos aqui si quisieramos que con los mismos datos siempre imprima el mismo monstruo
+        /*ArrayList<Integer> limbsDistribution = distributeLimbs();
         this.brazosIzquierdos = limbsDistribution.get(LEFT_ARMS_POSITION);
         this.brazosDerechos = limbsDistribution.get(RIGHT_ARMS_POSITION);
         this.piernasIzquierdas = limbsDistribution.get(LEFT_LEGS_POSITION);
-        this.piernasDerechas = limbsDistribution.get(RIGHT_LEGS_POSITION);
+        this.piernasDerechas = limbsDistribution.get(RIGHT_LEGS_POSITION);*/
+
     }
 
 
-    public ArrayList<Integer> distributeLimbs() {
-        ArrayList<Integer> limbsDistribution = new ArrayList<>();
+    public ArrayList<Integer> distribuirPatitas() {
+        ArrayList<Integer> distribucionPatitas = new ArrayList<>();
         int remaininglimbs = numPatas;
 
         int leftArms = (int) (Math.random() * remaininglimbs);
         remaininglimbs -= leftArms;
-        limbsDistribution.add(leftArms);
+        distribucionPatitas.add(leftArms);
 
         int rightArms = (int) (Math.random() * remaininglimbs);
         remaininglimbs -= rightArms;
-        limbsDistribution.add(rightArms);
+        distribucionPatitas.add(rightArms);
 
         int leftLegs = (int) (Math.random() * remaininglimbs);
         remaininglimbs -= leftLegs;
-        limbsDistribution.add(leftLegs);
+        distribucionPatitas.add(leftLegs);
 
         int rightLegs = remaininglimbs;
-        limbsDistribution.add(rightLegs);
+        distribucionPatitas.add(rightLegs);
 
-        return limbsDistribution;
+        return distribucionPatitas;
     }
 
     public int getColor() {
@@ -51,6 +53,13 @@ public class Monstruo implements Serializable {
 
     @Override
     public String toString() {
+
+        ArrayList<Integer> distribucionDePatitas = distribuirPatitas();
+        this.brazosIzquierdos = distribucionDePatitas.get(LEFT_ARMS_POSITION);
+        this.brazosDerechos = distribucionDePatitas.get(RIGHT_ARMS_POSITION);
+        this.piernasIzquierdas = distribucionDePatitas.get(LEFT_LEGS_POSITION);
+        this.piernasDerechas = distribucionDePatitas.get(RIGHT_LEGS_POSITION);
+
         String resultado="";
         resultado+="Nombre: "+nombre+"\n\n";
 

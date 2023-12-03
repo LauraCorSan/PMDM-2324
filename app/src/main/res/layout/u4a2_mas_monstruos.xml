@@ -6,4 +6,190 @@
     android:layout_height="match_parent"
     tools:context=".ut04.u4a2MasMonstruos">
 
+    <SeekBar
+        android:id="@+id/u4a2sbRojo"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:max="200"
+        android:progress="10"
+        android:thumbTint="#D32929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2tvColores" />
+
+    <SeekBar
+        android:id="@+id/u4a2sbAzul"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:max="200"
+        android:progress="10"
+        android:thumbTint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2sbVerde"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2sbVerde"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2sbVerde" />
+
+    <SeekBar
+        android:id="@+id/u4a2sbVerde"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:max="200"
+        android:progress="10"
+        android:thumbTint="#2A672C"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2sbRojo"
+        app:layout_constraintStart_toStartOf="@+id/u4a2sbRojo"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2sbRojo" />
+
+    <EditText
+        android:id="@+id/u4a2etNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2tvTitulo"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/u4a2tvTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2tvTitulo" />
+
+    <TextView
+        android:id="@+id/u4a2tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#E56B62"
+        android:gravity="center"
+        android:text="CREA TUS MONSTRUOS"
+        android:textColor="#F6F1F1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/u4a2etNumPatas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="nº patas"
+        android:inputType="number|numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2etNombre"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/u4a2etNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2etNombre" />
+
+    <TextView
+        android:id="@+id/u4a2tvColores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Colores:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2etNumPatas"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="@+id/u4a2etNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2etNumPatas" />
+
+    <Button
+        android:id="@+id/u4a2btCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E56B62"
+        android:text="crear"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2spNumMonstruos"
+        app:layout_constraintStart_toStartOf="@+id/u4a2spNumMonstruos"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2spNumMonstruos" />
+
+    <TextView
+        android:id="@+id/u4a2tvMuestraColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="¡Pulsa para ver el color!"
+        app:layout_constraintBottom_toBottomOf="@+id/u4a2tvColores"
+        app:layout_constraintStart_toEndOf="@+id/u4a2tvColores"
+        app:layout_constraintTop_toTopOf="@+id/u4a2tvColores" />
+
+    <Spinner
+        android:id="@+id/u4a2spNumMonstruos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:entries="@array/NumMonstruos"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2tvSelecciona"
+        app:layout_constraintStart_toStartOf="@+id/u4a2tvSelecciona"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2tvSelecciona" />
+
+    <TextView
+        android:id="@+id/u4a2tvSelecciona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Selecciona tu cantidad de monstruos:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2sbAzul"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/u4a2sbAzul"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2sbAzul" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2fcMonstruo1"
+        android:name="com.example.pmdm_2324.ut04.u4f2MasMonstruos"
+        android:layout_width="197dp"
+        android:layout_height="124dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2btCrear" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2fcMonstruo3"
+        android:name="com.example.pmdm_2324.ut04.u4f2MasMonstruos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/u4a2fcMonstruo4"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2fcMonstruo1"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="@+id/u4a2fcMonstruo1"
+        app:layout_constraintTop_toTopOf="@+id/u4a2fcMonstruo4"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2fcMonstruo2"
+        android:name="com.example.pmdm_2324.ut04.u4f2MasMonstruos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/u4a2fcMonstruo1"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2fcMonstruo4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/u4a2fcMonstruo1"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2btCrear"
+        app:layout_constraintVertical_bias="0.487" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2fcMonstruo4"
+        android:name="com.example.pmdm_2324.ut04.u4f2MasMonstruos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:drawable/gallery_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u4a2fcMonstruo3"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2fcMonstruo2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

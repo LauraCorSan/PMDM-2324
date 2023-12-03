@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut04.u4f3ContadorPuntos">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/u4f3tvContPuntosA"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/u4f3tvContPuntosB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/u4f3tvA" />
+
+        <TextView
+            android:id="@+id/u4f3tvContPuntosB"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/u4f3tvContPuntosA"
+            app:layout_constraintTop_toBottomOf="@+id/u4f3tvB" />
+
+        <TextView
+            android:id="@+id/u4f3tvA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#E58686"
+            android:gravity="center"
+            android:text="A"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/u4f3tvB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/u4f3etNombrePartida" />
+
+        <TextView
+            android:id="@+id/u4f3tvB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#7789ED"
+            android:gravity="center"
+            android:text="B"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/u4f3tvA"
+            app:layout_constraintTop_toTopOf="@+id/u4f3tvA" />
+
+        <EditText
+            android:id="@+id/u4f3etNombrePartida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

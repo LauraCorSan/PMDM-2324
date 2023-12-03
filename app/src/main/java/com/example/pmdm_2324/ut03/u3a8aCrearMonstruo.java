@@ -39,10 +39,6 @@ public class u3a8aCrearMonstruo extends AppCompatActivity {
         btCrear=findViewById(R.id.u3a8btCrear);
 
         tvMuestraColor.setOnClickListener(view -> {
-            int rojo=sbBarraRojo.getProgress();
-            int verde=sbBarraVerde.getProgress();
-            int azul=sbBarraAzul.getProgress();
-
             int color = Color.rgb(sbBarraRojo.getProgress(), sbBarraVerde.getProgress(), sbBarraAzul.getProgress());
             tvMuestraColor.setBackgroundColor(color);
         });
@@ -69,10 +65,6 @@ public class u3a8aCrearMonstruo extends AppCompatActivity {
                 //creating Monster object
                 String nombre = etNombre.getText().toString();
                 int numPatitas = Integer.parseInt(etNumPatas.getText().toString());
-
-                int rojo=sbBarraRojo.getProgress();
-                int verde=sbBarraVerde.getProgress();
-                int azul=sbBarraAzul.getProgress();
 
                 int color = Color.rgb(sbBarraRojo.getProgress(), sbBarraVerde.getProgress(), sbBarraAzul.getProgress());
                 Monstruo miCreacion = new Monstruo(nombre, numPatitas, color);
