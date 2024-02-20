@@ -28,7 +28,7 @@ public class u4a2MasMonstruos extends AppCompatActivity {
     Spinner spNumMonstruos;
     Button btCrear;
 
-    //TODO RECUERDA HACER LO DE QUE ENCAJEN LOS FRAGMENTS
+    //Intenta que encajen los fragments
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

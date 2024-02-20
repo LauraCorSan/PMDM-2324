@@ -44,7 +44,7 @@ public class eju6a1PartidoAdapter extends RecyclerView.Adapter<eju6a1PartidoAdap
     /**
      * Initialize the dataset of the Adapter.
      *
-     * @param dataSet String[] containing the data to populate views to be used
+     * @param dataSet String[] containing the data_RickAndMorty to populate views to be used
      * by RecyclerView.
      */
     public eju6a1PartidoAdapter(ejPartido[] dataSet) {

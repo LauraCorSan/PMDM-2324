@@ -27,7 +27,7 @@ public class u8a1NumAleatorioViewModel extends ViewModel {
                         //He recibido los datos (simila peticion remoto)
                         int i = (int) (Math.random() * MAX_NUM);
                         //¿?
-                        misDatos.postValue(i);
+                        misDatos.postValue(i);// IDK este metodo realiza dos operaciones importantes: 1. cambia el valor interno de "misDatos" 2. hace notify a todos sus suscriptores (añadidos al usar .observe)
                     } catch (InterruptedException e) {
                         misDatos.postValue(FAIL);
                         //throw new RuntimeException(e);

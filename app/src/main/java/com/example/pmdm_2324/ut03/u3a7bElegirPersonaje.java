@@ -97,7 +97,7 @@ public class u3a7bElegirPersonaje extends AppCompatActivity {
                     finish();//IMPORTANTE: NO hacer startactivity
             }else{
                 AlertDialog.Builder builder = new AlertDialog.Builder(u3a7bElegirPersonaje.this);
-                builder.setMessage("No has seleccionado ningun personaje")
+                builder.setMessage("No has seleccionado ningun Personaje")
                         .setPositiveButton("Entendido", null);
                 AlertDialog alert = builder.create();
                 alert.show();

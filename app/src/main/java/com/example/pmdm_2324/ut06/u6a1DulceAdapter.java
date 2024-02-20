@@ -47,7 +47,7 @@ public class u6a1DulceAdapter extends RecyclerView.Adapter<u6a1DulceAdapter.View
     /**
      * Initialize the dataset of the Adapter.
      *
-     * @param dataSet String[] containing the data to populate views to be used
+     * @param dataSet String[] containing the data_RickAndMorty to populate views to be used
      * by RecyclerView.
      */
     public u6a1DulceAdapter(DulcesNavideños[] dataSet) {
@@ -72,9 +72,8 @@ public class u6a1DulceAdapter extends RecyclerView.Adapter<u6a1DulceAdapter.View
     @Override
     public void onBindViewHolder(u6a1DulceAdapter.ViewHolder viewHolder, final int position) {
 
-        // Get element from your dataset at this position and replace the
-        // contents of the view with that element
-        //TODO COMO SE MOSTRARA EN EL TEXTVIEW LO QUE QUIERES
+
+        //NOTA: Aqui se mostrara como tu quieras que se vea en cada fila
         viewHolder.getTextNombre().setText(" -> "+datos.get(position).nombre + " <- " );
         viewHolder.getTextCalorias().setText(datos.get(position).calorias+" cal.");
         viewHolder.getTextFrutosSecos().setText(datos.get(position).frutosSecos? " * Contiene Frutos Secos" : "");

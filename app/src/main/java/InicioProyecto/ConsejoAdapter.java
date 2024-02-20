@@ -65,7 +65,7 @@ public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHol
     /**
      * Initialize the dataset of the Adapter.
      *
-     * @param dataSet String[] containing the data to populate views to be used
+     * @param dataSet String[] containing the data_RickAndMorty to populate views to be used
      * by RecyclerView.
      */
     public ConsejoAdapter(ArrayList<Consejo> dataSet) {

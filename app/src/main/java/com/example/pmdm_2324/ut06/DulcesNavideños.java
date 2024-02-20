@@ -20,7 +20,7 @@ public class DulcesNavideños {
         Collections.shuffle(dulces);
         DulcesNavideños dulce = new DulcesNavideños();
         dulce.nombre = dulces.get(0);
-        dulce.frutosSecos= (int)(Math.random()*100)>50;//TODO NO SE YO SI ESTO ESTA BIEN
+        dulce.frutosSecos= (int)(Math.random()*100)>50;//Podria mejorar
         dulce.calorias = (int)(Math.random()* MAX_CALORIAS);
         return dulce;
     }
