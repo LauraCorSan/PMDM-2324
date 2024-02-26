@@ -3,25 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#CFBBF3"
-    android:gravity="center"
+    android:background="#88B28A"
+    android:orientation="vertical"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/PivEjemplo"
-        android:layout_width="130dp"
-        android:layout_height="66dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/pregunta" />
-
     <TextView
-        android:id="@+id/tvTituloPelicula"
+        android:id="@+id/tvTextoComentario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView"
-        android:textAlignment="center"
+        android:text="&quot;un comentario caca&quot;"
+        android:textAlignment="textStart"
         android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="italic" />
 
 </LinearLayout>

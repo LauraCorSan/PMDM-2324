@@ -3,19 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#CFBBF3"
-    android:gravity="center"
+    android:background="#DBD7AC"
+    android:orientation="vertical"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/PivEjemplo"
-        android:layout_width="130dp"
-        android:layout_height="66dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/pregunta" />
-
     <TextView
-        android:id="@+id/tvTituloPelicula"
+        android:id="@+id/tvNombreActor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"

@@ -1,28 +1,23 @@
-package InicioProyecto;
+package com.example.pmdm_2324.Repaso2ev.PeliculasAPI;
 
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pmdm_2324.R;
+import com.example.pmdm_2324.Repaso2ev.PeliculasAPI.Api.Pelicula;
 
 import java.util.ArrayList;
 
-public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHolder> {
+public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.ViewHolder> {
 
-    private ArrayList<Consejo> datos;
-    private static final double COLOR_RANGE =254 ;
+    private ArrayList<Pelicula> datos;
 
-    /*
-     * Relacionado con el evento.
-     */
     public interface ItemClickListener {
-        void onClick(View view, int position, Consejo consejillo);
+        void onClick(View view, int position, Pelicula unaPelicula);
     }
 
     private ItemClickListener clickListener;
@@ -31,27 +26,22 @@ public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHol
         this.clickListener = itemClickListener;
     }
 
-
-    /**
-     * Provide a reference to the type of views that you are using
-     * (custom ViewHolder).
-     */
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView tvTitulo;
-        private final ImageView icono;
+        private final TextView tvEstrellas;
+
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
-
             tvTitulo = (TextView) view.findViewById(R.id.tvTituloPelicula);
-            icono = (ImageView) view.findViewById(R.id.PivEjemplo);
+            tvEstrellas = (TextView) view.findViewById(R.id.tvEstrellasPeli);
             view.setOnClickListener(this);
         }
 
-        public void setInfo(String titulo, int iconito) {
+        public void setInfo(String titulo, String estrellas) {
             tvTitulo.setText(titulo);
-            icono.setImageResource(iconito);
+            tvEstrellas.setText(estrellas);
         }
 
         @Override
@@ -67,9 +57,8 @@ public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHol
      * @param dataSet String[] containing the data_RickAndMorty to populate views to be used
      * by RecyclerView.
      */
-    public ConsejoAdapter(ArrayList<Consejo> dataSet) {
-        datos = new ArrayList<Consejo>();
-        add(dataSet);
+    public PeliculasAdapter(ArrayList<Pelicula> dataSet) {
+        datos = dataSet;
     }
 
     // Create new views (invoked by the layout manager)
@@ -77,13 +66,8 @@ public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHol
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.row_consejo, viewGroup, false);
+                .inflate(R.layout.ver_peliculas_row, viewGroup, false);
 
-        view.setBackgroundColor(Color.rgb(
-                (int)(Math.random()*COLOR_RANGE),
-                (int)(Math.random()*COLOR_RANGE),
-                (int)(Math.random()*COLOR_RANGE)
-        ));
         return new ViewHolder(view);
     }
 
@@ -93,8 +77,8 @@ public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHol
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        Consejo consejillo = datos.get(position);
-        viewHolder.setInfo(consejillo.getTitulo(), consejillo.getIcono());
+        Pelicula unaPelicula = datos.get(position);
+        viewHolder.setInfo(unaPelicula.getNombre(), unaPelicula.getStringEstrellas());
 
     }
 
@@ -104,8 +88,9 @@ public class ConsejoAdapter  extends RecyclerView.Adapter<ConsejoAdapter.ViewHol
         return datos.size();
     }
 
-    public void add(ArrayList<Consejo> dataSet){
-        datos.addAll(dataSet);
+    public void setPeliculas(ArrayList<Pelicula> peliculas){
+        datos.clear();
+        datos.addAll(peliculas);
         notifyDataSetChanged();
     }
 }

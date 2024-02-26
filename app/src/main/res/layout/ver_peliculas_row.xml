@@ -3,16 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#CFBBF3"
-    android:gravity="center"
+    android:background="#F4EFBF"
+    android:orientation="vertical"
     android:padding="10dp">
-
-    <ImageView
-        android:id="@+id/PivEjemplo"
-        android:layout_width="130dp"
-        android:layout_height="66dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/pregunta" />
 
     <TextView
         android:id="@+id/tvTituloPelicula"
@@ -23,5 +16,13 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvEstrellasPeli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="5★"
+        android:textAlignment="textEnd" />
 
 </LinearLayout>
