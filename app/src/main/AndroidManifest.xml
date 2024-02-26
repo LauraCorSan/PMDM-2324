@@ -40,6 +40,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Repaso2ev.FiltrarDeAPI.DetallesBares"
+            android:exported="false" />
+        <activity
+            android:name=".Repaso2ev.FiltrarDeAPI.VerListadoBares"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Repaso2ev.AtraccionesAPI.ComentariosAtraccion"
             android:exported="false" />
         <activity
